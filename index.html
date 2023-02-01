@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SORTER</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+<body>    
+    <hr>
+
+     <form action="" oninput="">
+        <p> Введи ключевые слова сюда:</p>
+         <input type="text" class="text-3"  name="" >    
+     </form>
+     
+
+    <div>
+        <div class="block" > 
+            <label for="" class="labl">Вставь список сюда:</label>
+            <textarea name="" class="text-1" id="" cols="50" rows="10" ></textarea>
+            <button class="butt-1" id="btn">ALL KEYWORD TWO AREAS</button>
+            
+        </div>
+
+        
+
+        <div class="block">
+                <label for="" class="labl">Данные  с ключевым  словом:</label>
+            <textarea name="" class="text-2" id=""cols="50" rows="10" autofocus></textarea>
+                <button class="butt-2" id="btn">С КЛЮЧАМИ</button> 
+        </div>
+
+        <div class="block"> 
+            <label for="" class="labl"></label>Данные без ключевого слова:</label>
+            <textarea name="" class="text-4" id=""cols="50" rows="10" autofocus></textarea>
+                <button class="butt-4" id="btn">БЕЗ КЛЮЧЕЙ</button> 
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div>
+        <p class="text-5">ALL KEYWORD TWO AREAS:
+        выводит в поле "Данные с ключевым  словом" данные, содержащие
+        ключевые(проверочные) значения. И одновременно выводит данные
+        без ключевых значений в поле "Данные без ключевого слова". <br>
+        С незаполненным полем для ввода
+        ключей выводится список включающий только уникальные строки.
+        </p>
+
+        <p class="text-6"> С КЛЮЧАМИ: выводит данные, содержащие проверочные ключи в поле 
+            "Данные  с ключевым  словом" <br>
+            С незаполненным полем для ввода
+            ключей выводится список включающий только уникальные строки.
+        </p> 
+
+        <p class="text-6">  БЕЗ КЛЮЧЕЙ: выводит список без данных, содержащих
+            проверочные ключи в поле "Данные без ключевого слова".
+        </p>
+
+        <p class="text-7">Все кнопки выводят только уникальные строки, исключая дубликаты, имеющие 
+            полное совпадение по всей строке.
+        </p>
+    </div>
+     <footer><h3 class="h4">SORTER</h3></footer>
+
+
+    <script src="main.js"></script>    
+</body>
+</html>
