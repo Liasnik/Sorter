@@ -225,12 +225,12 @@ function replaceName2() {
         } else {     
                 for (let i = 0; i < targetArr.length; i++) {
                     for (let j = 0; j < array.length; j++) {
-                        array[j] = array[j].replace(
-                            `${targetArr[i]}\t`,
+                        array[j] = array[j].toUpperCase().replace(
+                            `${targetArr[i].toUpperCase()}\t`,
                             `${replacementArr[i]}\t`
                         )
-                        array[j] = array[j].replace(
-                            `${targetArr[i]} `,
+                        array[j] = array[j].toUpperCase().replace(
+                            `${targetArr[i].toUpperCase()} `,
                             `${replacementArr[i]} `
                         )
                     }
