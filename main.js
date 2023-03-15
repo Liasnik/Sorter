@@ -10,13 +10,13 @@ const button_two_areas = document.querySelector('#btn-two-areas');
 button_two_areas.addEventListener('click', splitList);
 
 const button_strict_begin = document.querySelector('#btn-strict-begin');
-button_strict_begin .addEventListener('click', splitAtBeginning);
+button_strict_begin.addEventListener('click', splitAtBeginning);
 
-const button_strict_all_cell = document.querySelector('#btn-strict-all-cell');
-button_strict_all_cell .addEventListener('click', splitAtAllCell);
+const button_strict_inner_cell = document.querySelector('#btn-strict-inner-values');
+button_strict_inner_cell.addEventListener('click', splitByCellInnerValue);
 
 const button_strict_end = document.querySelector('#btn-strict-end');
-button_strict_end .addEventListener('click', splitAtEnding);
+button_strict_end.addEventListener('click', splitAtEnding);
 
 const button_with_keywords= document.querySelector('#btn-with-keywords');
 button_with_keywords.addEventListener('click', createWithKeys);
@@ -93,13 +93,13 @@ function splitAtBeginning() {
     areaWithoutKey.value = listWithout;
 };
 
-function splitAtAllCell() {
+function splitByCellInnerValuel() {
     const arrayKeywords = arrKey(); 
     const uniqArray = arrText();
 
     const newArray = uniqArray.filter(item => { 
         return arrayKeywords.some(allowed => {
-         return item.includes(`\t${allowed}\t`)
+         return item.includes(` ${allowed} `)
         })
     });
 
@@ -109,7 +109,7 @@ function splitAtAllCell() {
 
     const newArray2 = uniqArray.filter(item => { 
         return !arrayKeywords.some(forbidden => {
-         return item.includes(`\t${forbidden}\t`)
+         return item.includes(` ${forbidden} `)
         })
     });
       
@@ -196,7 +196,11 @@ function replaceName() {
                         uniqArray[j] = uniqArray[j].replace(
                             `${arrayKeywords[i]} `,
                             `${arrayNewValues[i]} `
-                        );
+                        )
+                        uniqArray[j] = uniqArray[j].replace(
+                            `${arrayKeywords[i]}\t`,
+                            `${arrayNewValues[i]}\t`
+                        )                     
                     }
                 }
             }
@@ -224,7 +228,11 @@ function replaceName2() {
                         array[j] = array[j].replace(
                             `${targetArr[i]}\t`,
                             `${replacementArr[i]}\t`
-                        );
+                        )
+                        array[j] = array[j].replace(
+                            `${targetArr[i]} `,
+                            `${replacementArr[i]} `
+                        )
                     }
                 }
             }
