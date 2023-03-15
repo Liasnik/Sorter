@@ -93,7 +93,7 @@ function splitAtBeginning() {
     areaWithoutKey.value = listWithout;
 };
 
-function splitByCellInnerValuel() {
+function splitByCellInnerValue() {
     const arrayKeywords = arrKey(); 
     const uniqArray = arrText();
 
